@@ -7,10 +7,16 @@ body {
 }
 
 header {
-    background: #4CAF50;
+    background: #4f8451;
     color: white;
     text-align: center;
     padding: 20px 0;
+}
+
+header img {
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid gray;
 }
 
 nav {
