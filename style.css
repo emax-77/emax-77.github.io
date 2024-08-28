@@ -7,16 +7,18 @@ body {
 }
 
 header {
-    background: #4f8451;
-    color: white;
+    background: blue;
+    color: lightgrey;
     text-align: center;
     padding: 20px 0;
 }
 
 header img {
-    width: 100px;
+    width: 150px;
     border-radius: 50%;
-    border: 2px solid gray;
+    border: 3px solid gray;
+    background-color: #333;
+    
 }
 
 nav {
@@ -41,15 +43,15 @@ nav ul li a {
 }
 
 .image-row {
-    display: flex; /* Use flexbox to align images in a row */
-    gap: 10px; /* Space between images */
-    justify-content: space-around; /* Distribute space evenly */
-    align-items: center; /* Center the images vertically */
+    display: flex; 
+    gap: 10px; 
+    justify-content: space-around; 
+    align-items: center; 
     padding: 10px;
 }
 .image-row img {
-    max-width: 100px; /* Set a maximum width for images */
-    height: auto; /* Keep the aspect ratio */
+    max-width: 100px; 
+    height: auto; 
 }
 
 
@@ -58,6 +60,11 @@ section {
     margin: 20px;
     background: white;
     border-radius: 8px;
+}
+
+section h2 {
+    color: #333;
+    text-align: center;
 }
 
 .project {
