@@ -7,18 +7,20 @@ body {
 }
 
 header {
-    background: blue;
-    color: lightgrey;
+    background: url('/pictures/code_image_blue.jpg') no-repeat center center; /* Adjust the path */
+    background-size: cover; /* Make sure the image covers the entire header */
+    color: white;
     text-align: center;
     padding: 20px 0;
+    position: relative; /* Ensure it stays within the header area */
 }
 
 header img {
-    width: 150px;
+    width: 100px;
     border-radius: 50%;
-    border: 3px solid gray;
-    background-color: #333;
-    
+    border: 2px solid gray;
+    position: relative; /* Keeps the logo on top of the background image */
+    z-index: 1; /* Ensures the logo stays on top of the background */
 }
 
 nav {
