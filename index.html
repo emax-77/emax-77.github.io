@@ -4,41 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Osobná Stránka</title>
+    <title>my page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Peter Wirth</h1>
-        <address>
-            <p>Email: <a href="mailto:peter.wirth@gmail.com">peter.wirth@gmail.com</a>  Phone: <a href="tel:+421908944619">+421 908 944 619</a></p>
-        </address>
         <img src="/pictures/pw_black_background.png" alt="Portrait of Peter Wirth">
         <p>Self-taught programmer seeking opportunities in IT</p>
     </header>
     
     <nav>
         <ul>
-            <li><a href="#o-mne">O mne</a></li>
-            <li><a href="#projekty">Projekty</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">My Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <section id="o-mne">
-        <h2>O mne</h2>
-        <p>Som 0b101110 ročný nadšenec technológii a programovania.
-            Inklinujem k backendu, z programovacích jazykov ovládam dobre Python a 
-            HTML, čiastočne CSS a JavaScript. Na základnej úrovni Java / Kotlin.
-            Rozumiem si s frameworkom Django, mám praktické skúsenosti s
-            MySQL, GIT / GitHub, Flask a rôznymi API. Rád a rýchlo sa učím nové technológie,
-            z predchádajúcich pozícii si prinášam zvládanie práce pod tlakom, 
-            odoslnoť voči stresu a schopnosť samostatne riešiť problémy.
-            Na <a href="https://www.codewars.com/users/emax-77">Codewars</a> mám 
-            viac ako 250 vyriešených zadaní v Pythone a na W3Schools.com som doteraz 
-            nazbieral cez 31.000 bodov za rôzne kurzy ktoré som u nich absolvoval. Toto číslo
-            stále rastie nakoľko túto platformu stále využívam na zlepšovanie svojich
-            schopností. Printscreen z W3Schools <a href="/gallery.html"> tu.</a>
+    
+    <section id="skills">
+        <h2>About me & My skills</h2>
+
+        <p> I'm a 0b101110 year old technology and programming enthusiast.
+            I'm good with Python and HTML, some CSS and JavaScript.
+            At a basic level Java / Kotlin.
+            I understand the Django framework and I have hands-on experience with
+            MySQL, GIT / GitHub, Flask and various APIs. I like to learn new technologies quickly and easily.
+            From previous positions I bring the ability to work under pressure, resilience to stress and
+            the ability to solve problems independently.       
+            I have over 250 solved assignments on <a href="https://www.codewars.com/users/emax-77">Codewars</a>
+            and have accumulated over 31,000 points on W3Schools.com 
+            so far for the various courses I have taken with them. This number is still growing
+            as I continue to use this platform to improve my skills.
+            Printscreen from W3Schools <a href="/gallery.html"> here.</a>
              </p>
              <div class="image-row">
                 <img src="/pictures/Python_logo.png" alt="Python logo">
@@ -52,32 +51,37 @@
     </section>
 
     
-    <section id="projekty">
-        <h2>Moje projekty</h2>
+    <section id="projects">
+        <h2>My projects</h2>
         <div class="project">
-            <a href="https://github.com/emax-77/Cycling-Club">Cykloklub</a>
-            <p>Zatiaľ môj najväčší projekt, zameraný na celkový manažment cyklo-turisticého klubu ktorého som členom a pokladníkom.
-                Vytvoril som ho v Django, je v ňom implementované prihlasovanie/registrácia, emailová notifikácia, grafy, galéria cez databázu,
-                prihlasovanie členov na akcie a pár ďalších vecí. Pre viac info pozrite README.md na GitHube. 
+            <a href="https://github.com/emax-77/Cycling-Club">Cycling Club</a>
+            <p>My biggest project so far, focusing on the overall management of the cycling and touring club
+                 of which I am a member and treasurer. I created it in Django, it implements login/registration,
+                 email notification, charts, gallery via database, member registration for events and a few other things.
+                 For more info, check out the README.md on GitHub.</p>
+        </div>
+        <div class="project">
+            <a href="https://github.com/emax-77/OpenMeteo-to-MySQL">Open-Meteo to MySQL</a>
+            <p>Flask app which downloads meteorological data from Open-Meteo.com using their API, stores this data
+                 in a MySQL database and then displays it on the page. Simplified version (just one python file) 
+                is <a href="https://github.com/emax-77/OpenMeteo-to-MySQL-PythonOnlyVersion"> here.</a> 
             </p>
         </div>
         <div class="project">
-            <a href="https://github.com/emax-77/OpenMeteo-to-MySQL">Open-Meteo do MySQL</a>
-            <p>Flask app ktorá sťahuje meteorologické dáta zo stránky Open-Meteo.com pomocou ich API, ukladá tieto údaje
-                do MySQL databázy a následne ich zobrazí v tabulke na stránke. Zjednodušená verzia (jeden Python súbor) 
-                je v repozitári <a href="https://github.com/emax-77/OpenMeteo-to-MySQL-PythonOnlyVersion"> tu.</a> 
-            </p>
-        </div>
-        <div class="project">
-            <a href="https://github.com/emax-77">Ostatné moje projekty na GitHub</a>
-            <p>Na mojom GitHube môžete náisť ešte pár drobných projektov v Pythone ako program ktorý sťahuje aktuálny kurzový
-                lístok (CSV súbor) z národnej banky slovenskej, TO-DO list v Djangu a jednoduchú puzzle hru ktorú som vytvoril ako môj 
-                úplne prvý Python program ešte v roku 2019.</p>
+            <a href="https://github.com/emax-77">My other projects on GitHub</a>
+            <p>On my GitHub you can find a few more small projects in Python like a program that downloads
+                 the current exchange rate ticket (CSV file) from the Slovak national bank, 
+                 a TO-DO list in Django and a simple puzzle game I created as my very first Python program back in 2019.</p>
         </div>
     </section>
 
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to contact me at peter.wirth@gmail.com  / phone +421908944619</p>
+
+
     <footer>
-        <p>&copy; 2024 Peter Wirth. Všetky práva vyhradené :)</p>
+        <p>&copy; 2024 Peter Wirth. All rights reserved :)</p>
     </footer>
 
     <script src="script.js"></script>
