@@ -79,7 +79,7 @@ nav ul li a {
 section {
     padding: 20px;
     margin: 20px;
-    background: white;
+    background: rgb(230, 230, 240);
     border-radius: 8px;
 }
 
@@ -90,6 +90,11 @@ section h2 {
 
 .project {
     margin-bottom: 20px;
+}
+
+#contact
+{
+    text-align: center;
 }
 
 footer {
