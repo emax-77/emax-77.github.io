@@ -59,8 +59,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: white;   
     text-decoration: none;
+
+}
+nav a:hover {
+    text-decoration: underline;
+    color: lightblue;
 }
 
 .image-row {
