@@ -67,17 +67,37 @@ nav a:hover {
     text-decoration: underline;
     color: lightblue;
 }
-
+/* Style the image container */
 .image-row {
-    display: flex; 
-    gap: 5%; 
-    justify-content: space-evenly; 
-    align-items: center; 
+    display: flex; /* Použitie Flexboxu pre zarovnanie v riadku */
+    flex-wrap: wrap; /* Povoliť zalamovanie obsahu */
+    gap: 20px; /* Priestor medzi obrázkami */
+    justify-content: center; /* Centrovanie riadku */
+    align-items: center; /* Zarovnanie obrázkov vertikálne */
     padding: 10px;
 }
+
 .image-row img {
-    max-width: 100px; 
-    height: auto; 
+    height: 80px; /* Nastavenie jednotnej výšky */
+    width: auto; /* Zachovanie pomeru strán */
+    object-fit: contain; /* Prispôsobenie obrázkov v rámci stanovenej výšky */
+    box-sizing: border-box; /* Započítať padding a border do výpočtov veľkosti */
+    border: 1px solid #ddd; /* Voliteľné: Pridať border pre vizuálnu zreteľnosť */
+    padding: 5px; /* Voliteľné: Pridať padding vo vnútri border */
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 600px) {
+    .image-row {
+        flex-direction: column; /* Obrázky sa zobrazia vertikálne na mobiloch */
+        align-items: center; /* Centrovanie obrázkov */
+    }
+
+    .image-row img {
+        width: 80%; /* Šírka obrázkov sa prispôsobí */
+        height: auto; /* Výška bude nastavená automaticky */
+        margin-bottom: 15px; /* Medzera medzi obrázkami */
+    }
 }
 
 
