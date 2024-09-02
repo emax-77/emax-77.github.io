@@ -89,14 +89,14 @@ nav a:hover {
 /* Media Queries for smaller screens */
 @media (max-width: 600px) {
     .image-row {
-        flex-direction: column; /* Obrázky sa zobrazia vertikálne na mobiloch */
+        flex-direction: row; /* Obrázky sa zobrazia vertikálne na mobiloch */
         align-items: center; /* Centrovanie obrázkov */
     }
 
     .image-row img {
-        width: 80%; /* Šírka obrázkov sa prispôsobí */
+        width: 20%; /* Šírka obrázkov sa prispôsobí */
         height: auto; /* Výška bude nastavená automaticky */
-        margin-bottom: 15px; /* Medzera medzi obrázkami */
+        margin-bottom: 3px; /* Medzera medzi obrázkami */
     }
 }
 
