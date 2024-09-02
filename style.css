@@ -28,7 +28,7 @@ header::before {
 }
 
 header img {
-    width: 100px;
+    width: 120px;
     border-radius: 50%;
     border: 2px solid gray;
     position: relative;
@@ -70,8 +70,8 @@ nav a:hover {
 
 .image-row {
     display: flex; 
-    gap: 10px; 
-    justify-content: space-around; 
+    gap: 5%; 
+    justify-content: space-evenly; 
     align-items: center; 
     padding: 10px;
 }
