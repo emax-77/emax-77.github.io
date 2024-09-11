@@ -23,7 +23,7 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    background-color: rgba(0, 0, 0, 0.5); 
     z-index: 0; 
 }
 
@@ -69,34 +69,34 @@ nav a:hover {
 }
 /* Style the image container */
 .image-row {
-    display: flex; /* Použitie Flexboxu pre zarovnanie v riadku */
-    flex-wrap: wrap; /* Povoliť zalamovanie obsahu */
-    gap: 20px; /* Priestor medzi obrázkami */
-    justify-content: center; /* Centrovanie riadku */
-    align-items: center; /* Zarovnanie obrázkov vertikálne */
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+    align-items: center;
     padding: 10px;
 }
 
 .image-row img {
-    height: 80px; /* Nastavenie jednotnej výšky */
-    width: auto; /* Zachovanie pomeru strán */
-    object-fit: contain; /* Prispôsobenie obrázkov v rámci stanovenej výšky */
-    box-sizing: border-box; /* Započítať padding a border do výpočtov veľkosti */
-    border: 1px solid #ddd; /* Voliteľné: Pridať border pre vizuálnu zreteľnosť */
-    padding: 5px; /* Voliteľné: Pridať padding vo vnútri border */
+    height: 80px; 
+    width: auto; 
+    object-fit: contain; 
+    box-sizing: border-box; 
+    border: 1px solid #ddd; 
+    padding: 5px;
 }
 
 /* Media Queries for smaller screens */
 @media (max-width: 600px) {
     .image-row {
-        flex-direction: row; /* Obrázky sa zobrazia vertikálne na mobiloch */
-        align-items: center; /* Centrovanie obrázkov */
+        flex-direction: row; 
+        align-items: center; 
     }
 
     .image-row img {
-        width: 20%; /* Šírka obrázkov sa prispôsobí */
-        height: auto; /* Výška bude nastavená automaticky */
-        margin-bottom: 3px; /* Medzera medzi obrázkami */
+        width: 20%; 
+        height: auto; 
+        margin-bottom: 3px; 
     }
 }
 
