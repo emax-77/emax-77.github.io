@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my page</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <header>
@@ -13,75 +15,85 @@
         <img src="/pictures/pw_black_background.png" alt="Portrait of Peter Wirth">
         <p>Self-taught programmer seeking opportunities in IT</p>
     </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">My Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 
-    
-    <section id="skills">
-        <h2>About me & My skills</h2>
+    <!-- Navigation -->
+    <ul class="nav nav-pills nav-fill gap-2 p-1 small rounded-5 shadow-sm" id="pillNav2" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" data-bs-target="#skills" type="button" role="tab" aria-selected="true">Skills</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link rounded-5" id="profile-tab2" data-bs-toggle="tab" data-bs-target="#projects" type="button" role="tab" aria-selected="false">Projects</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-selected="false">Contact</button>
+        </li>
+    </ul>
 
-        <p> I'm a 0b101110 year old technology and programming enthusiast.
-            I'm good with Python and HTML, some CSS and JavaScript.
-            At the basic level of Java, in which I'm trying to improve.
-            I understand the Django framework well and I have hands-on experience with some
-            SQL databases, GIT & GitHub, Flask framework and various APIs. I like to learn new technologies.
-            To verify the level of my knowledge, please see my projects.
-            All are my own work.      
-        </p>
-             <div class="image-row">
-                <img src="/pictures/Python_logo.png" alt="Python logo">
-                <img src="/pictures/Django_logo.png" alt="Django logo">
-                <img src="/pictures/Flask_logo.png" alt="Flask logo">
-                <img src="/pictures/HTML_logo.png" alt="HTML logo">
-                <img src="/pictures/CSS_logo.png" alt="CSS logo">
-                <img src="/pictures/MySQL_logo.png" alt="MySQL_logo">
-                <img src="/pictures/GIT_logo.png" alt="GIT logo">
-            </div>
-    </section>
-
-    
-    <section id="projects">
-        <h2>My projects</h2>
-        <div class="project">
-            <a href="https://github.com/emax-77/Cycling-Club">Cycling Club</a>
-            <p>My biggest project so far, focusing on the overall management of the cycling and touring club
-                 of which I am a member and treasurer. I created it in Django, it is a platform to manage members,
-                 club events and club treasury. For more info, check out the README.md on GitHub.
-            </p>
+    <!-- Tab content -->
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="skills" role="tabpanel" aria-labelledby="home-tab2">
+            <section>
+                <h2>About me & My skills</h2>
+                <p> I'm a 0b101110 year old technology and programming enthusiast.
+                    I'm good with Python, HTML, some CSS, and JavaScript.
+                    I’m currently improving my Java skills.
+                    I have experience with the Django framework, SQL databases, GIT, Flask, and various APIs.
+                    Check out my projects to validate my skills!
+                </p>
+                <div class="image-row">
+                    <img src="/pictures/Python_logo.png" alt="Python logo">
+                    <img src="/pictures/Django_logo.png" alt="Django logo">
+                    <img src="/pictures/Flask_logo.png" alt="Flask logo">
+                    <img src="/pictures/HTML_logo.png" alt="HTML logo">
+                    <img src="/pictures/CSS_logo.png" alt="CSS logo">
+                    <img src="/pictures/MySQL_logo.png" alt="MySQL logo">
+                    <img src="/pictures/GIT_logo.png" alt="GIT logo">
+                </div>
+            </section>
         </div>
-        <div class="project">
-            <a href="https://github.com/emax-77/OpenMeteo-to-MySQL">Open-Meteo to MySQL</a>
-            <p>Flask app which downloads meteorological data from Open-Meteo.com using their API, stores this data
-                 in a MySQL database and then displays it on the page. Simplified version (just one python file) 
-                is <a href="https://github.com/emax-77/OpenMeteo-to-MySQL-PythonOnlyVersion"> here.</a> 
-            </p>
-        </div>
-        <div class="project"></div>
-            <a href="https://github.com/emax-77/The-Canteen">The Canteen - under construction</a>
-            <p>"Project "The Canteen" is my new Django project which is still under construction. It should be a web app for ordering food
-                 in a canteen. It will include login/registration, order system and order management with email notifications, contact form, 
-                 payment system (not sure yet) and possibly some data exports. More info can be found in the README.md file on GitHub.
-            </p>
-        </div>
-        <div class="project">
-            <a href="https://github.com/emax-77">My other projects on GitHub</a>
-            <p>On my GitHub you can find a few more small projects in Python like Exchange Rate List - a program that downloads
-                 the current exchange rate ticket (CSV file) from the Slovak national bank, a TO-DO list in Django, 
-                 a Twilio REST API to send SMS messages from your browser and a simple puzzle game I created as my very first Python program back in 2019.
-            </p>
-        </div>
-    </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to contact me at peter.wirth@gmail.com or at +421908944619</p>
+        <div class="tab-pane fade" id="projects" role="tabpanel" aria-labelledby="profile-tab2">
+            <section>
+                <h2>My projects</h2>
+                <div class="project">
+                    <a href="https://github.com/emax-77/Cycling-Club" target="_blank">Cycling Club</a>
+                    <p>My biggest project so far, focusing on the overall management of the cycling and touring club 
+                        of which I am a member and treasurer. 
+                        I created it in Django, it is a platform to manage members, club events and club treasury.
+                        For more info, check out the README.md on GitHub..
+                    </p>
+                    </p>
+                </div>
+                <div class="project">
+                    <a href="https://github.com/emax-77/OpenMeteo-to-MySQL" target="_blank">Open-Meteo to MySQL</a>
+                    <p>Flask app which downloads meteorological data from Open-Meteo.com using their API, stores this data in a MySQL database and then displays it on the page.
+                        Simplified version (just one python file) is <a href="https://github.com/emax-77/OpenMeteo-to-MySQL-PythonOnlyVersion">here</a></p>
+                </div>
+                <div class="project">
+                    <a href="https://github.com/emax-77/The-Canteen" target="_blank">The Canteen (In Progress)</a>
+                    <p>"Project "The Canteen" is my new Django project which is still under construction. 
+                        It should be a web app for ordering food in a canteen. It will include login/registration,
+                        order system and order management with email notifications, contact form, payment system (not sure yet) 
+                        and possibly some data exports. More info can be found in the README.md file on GitHub.</p>
+                </div>
+                <div class="project">
+                    <a href="https://github.com/emax-77" target="_blank">More Projects on GitHub</a>
+                    <p>Explore more projects like Exchange Rate List, Twilio SMS API, simple puzzle game
+                        I created as my very first Python program back in 2019 and more on my GitHub page.</p>
+                </div>
+            </section>
+        </div>
 
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab2">
+            <section>
+                <h2>Contact</h2>
+                <p>You can reach me at <a href="mailto:peter.wirth@gmail.com">peter.wirth@gmail.com</a> or call me at +421908944619.</p>
+            </section>
+        </div>
+    </div>
+
+    <!-- Scroll to top button -->
+    <button id="scrollToTopBtn">⬆️ Top</button>
 
     <footer>
         <p>&copy; <span id="current-year"></span> Peter Wirth. All rights reserved :)</p>
