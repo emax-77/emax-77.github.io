@@ -168,6 +168,10 @@ footer {
     color: white;
 }
 
+footer p {
+    color: #ddd;
+}
+
 /* Scroll to Top Button */
 #scrollToTopBtn {
     position: fixed;
