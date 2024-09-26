@@ -98,7 +98,7 @@ section {
     border-radius: 8px;
 }
 
-section h2 {
+section h2,p {
     color: #333;
     text-align: center;
 
