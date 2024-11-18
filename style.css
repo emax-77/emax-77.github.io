@@ -116,7 +116,7 @@ section h2 {
 
 .project-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Makes a grid with flexible column width */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Makes a grid with flexible column width */
     gap: 20px; 
 }
 
