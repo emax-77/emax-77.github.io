@@ -147,11 +147,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // LAZY LOADING IMAGES
 // ==========================================
 if ('loading' in HTMLImageElement.prototype) {
-    // Browser supports native lazy loading
-    const images = document.querySelectorAll('img[loading="lazy"]');
-    images.forEach(img => {
-        img.src = img.src;
-    });
+    // Browser supports native lazy loading - nothing to do
 } else {
     // Fallback for browsers that don't support native lazy loading
     const lazyImages = document.querySelectorAll('img[loading="lazy"]');
@@ -160,7 +156,10 @@ if ('loading' in HTMLImageElement.prototype) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const img = entry.target;
-                img.src = img.src;
+                // Images already have src set, just ensure they're loaded
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                }
                 img.classList.add('loaded');
                 imageObserver.unobserve(img);
             }
@@ -217,7 +216,6 @@ function debounce(func, wait = 10, immediate = true) {
     };
 }
 
-// Apply debouncing to scroll-heavy functions
-const debouncedHighlight = debounce(highlightNavigation, 10);
-window.addEventListener('scroll', debouncedHighlight);
+// Debounced version already applied on line 78
+// No need to add another listener
 

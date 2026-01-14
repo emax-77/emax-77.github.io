@@ -462,7 +462,7 @@ body {
     padding: 2px;
     background: linear-gradient(135deg, var(--color-accent-blue), var(--color-accent-purple));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
+    -webkit-mask-composite: subtract;
     mask-composite: exclude;
     opacity: 0;
     transition: var(--transition-base);
