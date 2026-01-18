@@ -126,14 +126,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
         
-        // Don't prevent default for empty hash or just '#'
         if (href === '#' || href === '') return;
         
         e.preventDefault();
         
         const target = document.querySelector(href);
         if (target) {
-            const offsetTop = target.offsetTop - 80; // Account for fixed header
+            const offsetTop = target.offsetTop - 80; 
             
             window.scrollTo({
                 top: offsetTop,
@@ -215,7 +214,4 @@ function debounce(func, wait = 10, immediate = true) {
         if (callNow) func.apply(context, args);
     };
 }
-
-// Debounced version already applied on line 78
-// No need to add another listener
 
