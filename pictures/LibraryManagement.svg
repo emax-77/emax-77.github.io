@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Library Management cover">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0e27"/>
+      <stop offset="0.55" stop-color="#1a1d3a"/>
+      <stop offset="1" stop-color="#252850"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="30%" cy="35%" r="60%">
+      <stop offset="0" stop-color="#4a9eff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#4a9eff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="85%" cy="65%" r="70%">
+      <stop offset="0" stop-color="#f093fb" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#f093fb" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4a9eff"/>
+      <stop offset="0.55" stop-color="#764ba2"/>
+      <stop offset="1" stop-color="#f093fb"/>
+    </linearGradient>
+    <pattern id="grid" width="54" height="54" patternUnits="userSpaceOnUse">
+      <path d="M54 0H0V54" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect width="1200" height="675" fill="url(#glow1)"/>
+  <rect width="1200" height="675" fill="url(#glow2)"/>
+  <rect width="1200" height="675" fill="url(#grid)"/>
+
+  <!-- Center icon: single book -->
+  <g transform="translate(600 318)" filter="url(#softShadow)">
+    <!-- Shelf plate -->
+    <rect x="-270" y="-170" width="540" height="340" rx="56" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.10)"/>
+
+    <!-- Open book (clearly recognizable) -->
+    <g transform="translate(0 14)">
+      <!-- Shadow -->
+      <path d="M-210 96 C-90 132, 90 132, 210 96 C160 138, -160 138, -210 96 Z" fill="rgba(0,0,0,0.28)" opacity="0.45"/>
+
+      <!-- Covers (outer shape) -->
+      <path d="M-220 -90 C-150 -120, -60 -112, 0 -76 C60 -112, 150 -120, 220 -90 V120 C150 92, 60 98, 0 124 C-60 98, -150 92, -220 120 Z"
+            fill="#0f1434" stroke="rgba(255,255,255,0.14)" stroke-width="3"/>
+
+      <!-- Accent along the top edge -->
+      <path d="M-220 -90 C-150 -120, -60 -112, 0 -76 C60 -112, 150 -120, 220 -90" fill="none" stroke="url(#accent)" stroke-width="10" stroke-linecap="round" opacity="0.75"/>
+
+      <!-- Pages (inner) -->
+      <path d="M-200 -78 C-135 -102, -65 -96, 0 -66 V108 C-70 86, -140 88, -200 106 Z"
+            fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.10)" stroke-width="2"/>
+      <path d="M200 -78 C135 -102, 65 -96, 0 -66 V108 C70 86, 140 88, 200 106 Z"
+            fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.10)" stroke-width="2"/>
+
+      <!-- Spine / gutter -->
+      <path d="M0 -66 V124" stroke="#00d4ff" stroke-opacity="0.55" stroke-width="6" stroke-linecap="round"/>
+      <path d="M-8 -60 C-10 -10, -10 50, -8 118" stroke="rgba(255,255,255,0.10)" stroke-width="3" fill="none"/>
+      <path d="M8 -60 C10 -10, 10 50, 8 118" stroke="rgba(255,255,255,0.10)" stroke-width="3" fill="none"/>
+
+      <!-- Page lines (no text) -->
+      <g stroke="#ffffff" stroke-opacity="0.16" stroke-width="4" stroke-linecap="round">
+        <path d="M-176 -22 H-52"/>
+        <path d="M-176 8 H-74"/>
+        <path d="M-176 38 H-62"/>
+        <path d="M52 -22 H176"/>
+        <path d="M74 8 H176"/>
+        <path d="M62 38 H176"/>
+      </g>
+
+      <!-- Bottom page curl hints -->
+      <path d="M-200 106 C-148 86, -84 84, 0 108" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="3"/>
+      <path d="M200 106 C148 86, 84 84, 0 108" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

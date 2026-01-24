@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="SimpleNavigator cover">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0e27"/>
+      <stop offset="0.55" stop-color="#1a1d3a"/>
+      <stop offset="1" stop-color="#252850"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="25%" cy="35%" r="60%">
+      <stop offset="0" stop-color="#4a9eff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#4a9eff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="80%" cy="70%" r="65%">
+      <stop offset="0" stop-color="#a855f7" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4a9eff"/>
+      <stop offset="0.55" stop-color="#764ba2"/>
+      <stop offset="1" stop-color="#f093fb"/>
+    </linearGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect width="1200" height="675" fill="url(#glow1)"/>
+  <rect width="1200" height="675" fill="url(#glow2)"/>
+  <rect width="1200" height="675" fill="url(#grid)"/>
+
+  <!-- Center icon: Compass + pin -->
+  <g transform="translate(600 318)" filter="url(#softShadow)">
+    <!-- Outer ring -->
+    <circle r="168" fill="#0f1434" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+    <circle r="142" fill="none" stroke="url(#accent)" stroke-width="6" opacity="0.9"/>
+
+    <!-- Compass ticks -->
+    <g stroke="#ffffff" stroke-opacity="0.20" stroke-width="3" stroke-linecap="round">
+      <path d="M0,-128 L0,-112"/>
+      <path d="M0,128 L0,112"/>
+      <path d="M128,0 L112,0"/>
+      <path d="M-128,0 L-112,0"/>
+      <path d="M90,-90 L78,-78"/>
+      <path d="M90,90 L78,78"/>
+      <path d="M-90,90 L-78,78"/>
+      <path d="M-90,-90 L-78,-78"/>
+    </g>
+
+    <!-- Needle -->
+    <g transform="rotate(-20)">
+      <path d="M0,-118 L28,0 L0,18 L-28,0 Z" fill="url(#accent)"/>
+      <path d="M0,118 L-18,0 L0,-8 L18,0 Z" fill="#00d4ff" opacity="0.9"/>
+    </g>
+
+    <!-- Center cap -->
+    <circle r="16" fill="#0a0e27" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+
+    <!-- Location pin (moved outside the compass) -->
+    <g transform="translate(240 -140)">
+      <path d="M0,-46c-22,0-40,18-40,40c0,30,40,76,40,76s40-46,40-76c0-22-18-40-40-40z" fill="rgba(255,255,255,0.06)" stroke="url(#accent)" stroke-width="3"/>
+      <circle cx="0" cy="-6" r="12" fill="#00d4ff" opacity="0.9"/>
+    </g>
+  </g>
+</svg>

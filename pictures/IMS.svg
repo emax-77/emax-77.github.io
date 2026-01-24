@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Inventory Management System cover">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0e27"/>
+      <stop offset="0.55" stop-color="#1a1d3a"/>
+      <stop offset="1" stop-color="#252850"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="26%" cy="32%" r="65%">
+      <stop offset="0" stop-color="#4a9eff" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#4a9eff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="84%" cy="68%" r="70%">
+      <stop offset="0" stop-color="#00d4ff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#00d4ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4a9eff"/>
+      <stop offset="0.55" stop-color="#764ba2"/>
+      <stop offset="1" stop-color="#f093fb"/>
+    </linearGradient>
+    <pattern id="diag" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(18)">
+      <rect width="26" height="26" fill="none"/>
+      <rect x="0" y="0" width="10" height="26" fill="#ffffff" opacity="0.035"/>
+    </pattern>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect width="1200" height="675" fill="url(#glow1)"/>
+  <rect width="1200" height="675" fill="url(#glow2)"/>
+  <rect width="1200" height="675" fill="url(#diag)"/>
+
+  <!-- Center icon: a few loose boxes -->
+  <g transform="translate(600 318)" filter="url(#softShadow)">
+    <rect x="-280" y="-170" width="560" height="340" rx="56" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.10)"/>
+
+    <!-- Loose boxes cluster -->
+    <g transform="translate(0 28)">
+      <!-- Box A (front) -->
+      <g transform="translate(-90 40) rotate(-10)">
+        <path d="M-120 -20 L-40 -60 L80 -10 L0 30 Z" fill="#0f1434" stroke="url(#accent)" stroke-width="4"/>
+        <path d="M0 30 L80 -10 L80 72 L0 112 Z" fill="#131a42" stroke="rgba(255,255,255,0.12)" stroke-width="3"/>
+        <path d="M-120 -20 L0 30 L0 112 L-120 62 Z" fill="#10163a" stroke="rgba(255,255,255,0.12)" stroke-width="3"/>
+        <path d="M-78 -18 L-22 6" stroke="#00d4ff" stroke-opacity="0.45" stroke-width="5" stroke-linecap="round"/>
+      </g>
+
+      <!-- Box B (back right) -->
+      <g transform="translate(140 20) rotate(8)">
+        <path d="M-90 -30 L-20 -62 L92 -22 L20 10 Z" fill="#10163a" stroke="rgba(255,255,255,0.14)" stroke-width="3"/>
+        <path d="M20 10 L92 -22 L92 54 L20 86 Z" fill="#131a42" stroke="rgba(255,255,255,0.12)" stroke-width="3"/>
+        <path d="M-90 -30 L20 10 L20 86 L-90 46 Z" fill="#0f1434" stroke="rgba(255,255,255,0.12)" stroke-width="3"/>
+      </g>
+
+      <!-- Box C (small top) -->
+      <g transform="translate(10 -50) rotate(-4)">
+        <path d="M-70 -10 L-20 -34 L62 -4 L12 20 Z" fill="#0f1434" stroke="url(#accent)" stroke-width="3" opacity="0.95"/>
+        <path d="M12 20 L62 -4 L62 44 L12 68 Z" fill="#131a42" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+        <path d="M-70 -10 L12 20 L12 68 L-70 38 Z" fill="#10163a" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>
