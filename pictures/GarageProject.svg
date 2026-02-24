@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Garage Project cover">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0e27"/>
+      <stop offset="0.55" stop-color="#1a1d3a"/>
+      <stop offset="1" stop-color="#252850"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="24%" cy="34%" r="62%">
+      <stop offset="0" stop-color="#4a9eff" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#4a9eff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="82%" cy="70%" r="70%">
+      <stop offset="0" stop-color="#a855f7" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow3" cx="65%" cy="22%" r="55%">
+      <stop offset="0" stop-color="#00d4ff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#00d4ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4a9eff"/>
+      <stop offset="0.55" stop-color="#764ba2"/>
+      <stop offset="1" stop-color="#f093fb"/>
+    </linearGradient>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.2" fill="#ffffff" opacity="0.10"/>
+    </pattern>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect width="1200" height="675" fill="url(#glow1)"/>
+  <rect width="1200" height="675" fill="url(#glow2)"/>
+  <rect width="1200" height="675" fill="url(#glow3)"/>
+  <rect width="1200" height="675" fill="url(#dots)"/>
+
+  <!-- Center illustration: phone -> server -> ESP32 -> garage door -->
+  <g transform="translate(600 318)" filter="url(#softShadow)">
+    <!-- Backplate -->
+    <rect x="-280" y="-170" width="560" height="340" rx="56" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.10)"/>
+
+    <!-- Connection path (glow) -->
+    <path d="M-116 10 C-60 -60, -20 -80, 20 -40 C80 10, 120 18, 160 30 C230 44, 270 52, 320 85"
+          fill="none" stroke="url(#accent)" stroke-width="10" stroke-linecap="round" opacity="0.22" filter="url(#softGlow)"/>
+
+    <!-- Connection path (line) -->
+    <path d="M-116 10 C-60 -60, -20 -80, 20 -40 C80 10, 120 18, 160 30 C230 44, 270 52, 320 85"
+          fill="none" stroke="rgba(255,255,255,0.16)" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Nodes -->
+    <g fill="#0f1434" stroke="rgba(255,255,255,0.14)" stroke-width="2">
+      <circle cx="-116" cy="10" r="10"/>
+      <circle cx="20" cy="-40" r="10"/>
+      <circle cx="160" cy="30" r="10"/>
+      <circle cx="320" cy="85" r="10"/>
+    </g>
+
+    <!-- Phone (left) -->
+    <g transform="translate(-200 35)">
+      <rect x="-84" y="-118" width="168" height="236" rx="34" fill="#0f1434" stroke="rgba(255,255,255,0.14)" stroke-width="3"/>
+      <rect x="-64" y="-92" width="128" height="176" rx="20" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.10)"/>
+      <rect x="-24" y="94" width="48" height="10" rx="5" fill="rgba(255,255,255,0.12)"/>
+
+      <!-- App button (no text) -->
+      <rect x="-34" y="-18" width="68" height="44" rx="16" fill="url(#accent)" opacity="0.85"/>
+      <path d="M-10 4h20" stroke="#0a0e27" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+
+      <!-- Wi-Fi arcs -->
+      <g fill="none" stroke="#00d4ff" stroke-opacity="0.55" stroke-width="6" stroke-linecap="round">
+        <path d="M-38 -56 C-12 -78, 12 -78, 38 -56"/>
+        <path d="M-24 -42 C-8 -56, 8 -56, 24 -42"/>
+        <path d="M-10 -30 C-3 -36, 3 -36, 10 -30"/>
+      </g>
+    </g>
+
+    <!-- Home server (top center) -->
+    <g transform="translate(20 -110)">
+      <rect x="-92" y="-62" width="184" height="124" rx="26" fill="#0f1434" stroke="rgba(255,255,255,0.14)" stroke-width="3"/>
+      <rect x="-74" y="-46" width="148" height="28" rx="14" fill="rgba(255,255,255,0.06)"/>
+      <rect x="-74" y="-8" width="148" height="28" rx="14" fill="rgba(255,255,255,0.06)"/>
+      <rect x="-74" y="30" width="148" height="28" rx="14" fill="rgba(255,255,255,0.06)"/>
+      <circle cx="60" cy="-32" r="6" fill="#00d4ff" opacity="0.75"/>
+      <circle cx="60" cy="6" r="6" fill="#ffffff" opacity="0.25"/>
+      <circle cx="60" cy="44" r="6" fill="#ffffff" opacity="0.25"/>
+      <path d="M-92 -62 H92" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" opacity="0.55"/>
+    </g>
+
+    <!-- ESP32 chip (mid-right) -->
+    <g transform="translate(160 30)">
+      <rect x="-86" y="-68" width="172" height="136" rx="26" fill="#0f1434" stroke="rgba(255,255,255,0.14)" stroke-width="3"/>
+      <rect x="-56" y="-38" width="112" height="76" rx="18" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.10)"/>
+      <!-- Pins -->
+      <g stroke="rgba(255,255,255,0.14)" stroke-width="4" stroke-linecap="round">
+        <path d="M-92 -44 H-108"/>
+        <path d="M-92 -20 H-108"/>
+        <path d="M-92 4 H-108"/>
+        <path d="M-92 28 H-108"/>
+        <path d="M92 -44 H108"/>
+        <path d="M92 -20 H108"/>
+        <path d="M92 4 H108"/>
+        <path d="M92 28 H108"/>
+      </g>
+      <!-- Signal lines (no text) -->
+      <g stroke="#00d4ff" stroke-opacity="0.5" stroke-width="5" stroke-linecap="round">
+        <path d="M-30 -10 H30"/>
+        <path d="M-30 10 H18"/>
+      </g>
+
+      <text x="0" y="10" text-anchor="middle" fill="#e8eaf0" opacity="0.85"
+            font-size="22" font-weight="650" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+            letter-spacing="1">ESP32</text>
+    </g>
+
+    <!-- Garage door (right) -->
+    <g transform="translate(360 85)">
+      <rect x="-40" y="-92" width="170" height="184" rx="26" fill="#0f1434" stroke="rgba(255,255,255,0.14)" stroke-width="3"/>
+      <rect x="-18" y="-70" width="126" height="118" rx="18" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.10)"/>
+      <!-- Panels -->
+      <g stroke="rgba(255,255,255,0.12)" stroke-width="4" stroke-linecap="round">
+        <path d="M-6 -44 H96"/>
+        <path d="M-6 -16 H96"/>
+        <path d="M-6 12 H96"/>
+        <path d="M-6 40 H96"/>
+      </g>
+      <!-- Up arrow indicator -->
+      <path d="M110 -94 V-130" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/>
+      <path d="M96 -116 L110 -132 L124 -116" fill="none" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>
